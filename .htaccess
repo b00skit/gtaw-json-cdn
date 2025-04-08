@@ -1,16 +1,23 @@
-# Enable CORS for all JSON files
+# Enable CORS for all domains
 <IfModule mod_headers.c>
-  # Set headers for the JSON directory
-  <FilesMatch "\.(json)$">
-    Header set Access-Control-Allow-Origin "*"
-    Header set Access-Control-Allow-Methods "GET, OPTIONS"
-    Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"
-    Header set Content-Type "application/json"
-    Header set Cache-Control "max-age=86400, public"
-  </FilesMatch>
+    # Always set these headers for CORS
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, DELETE"
+    Header always set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    Header always set Access-Control-Max-Age "1728000"
+    
+    # Handle preflight OPTIONS requests
+    RewriteEngine On
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ $1 [R=200,L]
 </IfModule>
 
-# Handle OPTIONS preflight requests for JSON files
-RewriteEngine On
-RewriteCond %{REQUEST_METHOD} OPTIONS
-RewriteRule ^(.*)$ $1 [R=200,L]
+# If the above doesn't work, try this alternative approach:
+<IfModule mod_headers.c>
+    SetEnvIf Origin "^(.*)$" ORIGIN_SUB_DOMAIN=$1
+    Header set Access-Control-Allow-Origin "%{ORIGIN_SUB_DOMAIN}e" env=ORIGIN_SUB_DOMAIN
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, DELETE"
+    Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    Header set Access-Control-Max-Age "1728000"
+    Header set Access-Control-Allow-Credentials "true"
+</IfModule>
