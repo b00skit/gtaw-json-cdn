@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     async function fetchJsonFile(file) {
         try {
-            const response = await fetch(`${baseUrl}/json/${file}`);
+            const response = await fetch(`${baseUrl}/serve.php?file=${file}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.copy-link').forEach(button => {
         button.addEventListener('click', () => {
             const file = button.getAttribute('data-file');
-            const fileUrl = `${baseUrl}/json/${file}`;
+            const fileUrl = `${baseUrl}/serve.php?file=${file}`;
             copyToClipboard(fileUrl);
         });
     });
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.copy-code').forEach(button => {
         button.addEventListener('click', () => {
             const file = button.getAttribute('data-file');
-            const fileUrl = `${baseUrl}/json/${file}`;
+            const fileUrl = `${baseUrl}/serve.php?file=${file}`;
             const fetchCode = `fetch('${fileUrl}')
   .then(response => response.json())
   .then(data => {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.download-file').forEach(button => {
         button.addEventListener('click', () => {
             const file = button.getAttribute('data-file');
-            const fileUrl = `${baseUrl}/json/${file}`;
+            const fileUrl = `${baseUrl}/serve.php?file=${file}`;
             
             // Create a temporary anchor element
             const a = document.createElement('a');

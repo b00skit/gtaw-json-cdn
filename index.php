@@ -103,7 +103,7 @@ function formatBytes($bytes, $precision = 2) {
                         <?php foreach ($json_files as $file): ?>
                             <tr class="file-row" data-filename="<?php echo htmlspecialchars($file['name']); ?>">
                                 <td class="file-name">
-                                    <a href="<?php echo $base_url; ?>/json/<?php echo htmlspecialchars($file['name']); ?>" target="_blank">
+                                    <a href="<?php echo $base_url; ?>/serve.php?file=<?php echo htmlspecialchars($file['name']); ?>" target="_blank">
                                         <?php echo htmlspecialchars($file['name']); ?>
                                     </a>
                                 </td>
@@ -146,7 +146,7 @@ function formatBytes($bytes, $precision = 2) {
                                             </div>
                                             <div class="tab-content" data-tab="fetch">
                                                 <pre><code>// Using Fetch API
-fetch('<?php echo $base_url; ?>/json/<?php echo htmlspecialchars($file['name']); ?>')
+fetch('<?php echo $base_url; ?>/serve.php?file=<?php echo htmlspecialchars($file['name']); ?>')
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -164,12 +164,12 @@ xhr.onreadystatechange = function() {
     // Process your data here
   }
 };
-xhr.open("GET", "<?php echo $base_url; ?>/json/<?php echo htmlspecialchars($file['name']); ?>", true);
+xhr.open("GET", "<?php echo $base_url; ?>/serve.php?file=<?php echo htmlspecialchars($file['name']); ?>", true);
 xhr.send();</code></pre>
                                             </div>
                                             <div class="tab-content" data-tab="jquery">
                                                 <pre><code>// Using jQuery
-$.getJSON("<?php echo $base_url; ?>/json/<?php echo htmlspecialchars($file['name']); ?>", function(data) {
+$.getJSON("<?php echo $base_url; ?>/serve.php?file=<?php echo htmlspecialchars($file['name']); ?>", function(data) {
   console.log(data);
   // Process your data here
 });</code></pre>
@@ -184,7 +184,7 @@ static schema() {
     placeholder: 'Select an item',
     dataSrc: 'url',
     data: {
-      url: '<?php echo $base_url; ?>/json/<?php echo htmlspecialchars($file['name']); ?>',
+      url: '<?php echo $base_url; ?>/serve.php?file=<?php echo htmlspecialchars($file['name']); ?>',
       headers: [
         {
           key: 'Content-Type',
@@ -210,21 +210,13 @@ static schema() {
         
         <div class="cdn-instructions">
             <h2>How to Use This JSON CDN</h2>
-            <p>This CDN allows cross-origin requests from any website. Simply use the direct URL to any JSON file:</p>
+            <p>This CDN allows cross-origin requests from any website. Simply use the serve.php endpoint with the file parameter:</p>
             <div class="code-block">
-                <code><?php echo $base_url; ?>/json/filename.json</code>
+                <code><?php echo $base_url; ?>/serve.php?file=filename.json</code>
                 <button class="copy-button" id="copy-cdn-example">
                     <i class="fas fa-copy"></i>
                 </button>
             </div>
-            
-            <h3>Features:</h3>
-            <ul>
-                <li><i class="fas fa-check"></i> <strong>CORS Enabled:</strong> Access from any domain without restrictions</li>
-                <li><i class="fas fa-check"></i> <strong>Proper Content Type:</strong> All responses have application/json content type</li>
-                <li><i class="fas fa-check"></i> <strong>Caching:</strong> Files are cached for 24 hours for better performance</li>
-                <li><i class="fas fa-check"></i> <strong>Simple Implementation:</strong> Use with any JavaScript framework or library</li>
-            </ul>
         </div>
     </div>
 
@@ -233,7 +225,7 @@ static schema() {
     </div>
 
     <footer>
-        <p>&copy; <?php echo date("Y"); ?> JSON CDN Directory. All rights reserved.</p>
+        <p>&copy; <?php echo date("Y"); ?> booskit.dev</p>
     </footer>
 
     <script>
