@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fileRows = document.querySelectorAll('.file-row');
     const toast = document.getElementById('toast');
     const toastMessage = document.getElementById('toast-message');
+    const copyExampleBtn = document.getElementById('copy-cdn-example');
     
     // Functions
     function showToast(message, duration = 3000) {
@@ -27,13 +28,23 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function filterFiles(query) {
         const searchTerm = query.toLowerCase();
+        let parentRows = document.querySelectorAll('table.files-table tbody > tr:nth-child(odd)');
+        let childRows = document.querySelectorAll('table.files-table tbody > tr:nth-child(even)');
         
-        fileRows.forEach(row => {
-            const fileName = row.getAttribute('data-filename').toLowerCase();
+        parentRows.forEach((row, index) => {
+            const fileName = row.querySelector('.file-name').textContent.toLowerCase();
             if (fileName.includes(searchTerm)) {
-                row.style.display = 'block';
+                row.style.display = 'table-row';
+                // If the parent row is visible, we need to check if the preview is open
+                if (childRows[index] && !childRows[index].classList.contains('hidden')) {
+                    childRows[index].style.display = 'table-row';
+                }
             } else {
                 row.style.display = 'none';
+                // Hide the child row as well
+                if (childRows[index]) {
+                    childRows[index].style.display = 'none';
+                }
             }
         });
     }
@@ -64,6 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
+    // Copy CDN example
+    if (copyExampleBtn) {
+        copyExampleBtn.addEventListener('click', () => {
+            const exampleCode = copyExampleBtn.previousElementSibling.textContent;
+            copyToClipboard(exampleCode);
+        });
+    }
+    
     // Copy link functionality
     document.querySelectorAll('.copy-link').forEach(button => {
         button.addEventListener('click', () => {
@@ -73,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Copy JS code functionality
+    // Copy code functionality
     document.querySelectorAll('.copy-code').forEach(button => {
         button.addEventListener('click', () => {
             const file = button.getAttribute('data-file');
@@ -92,26 +111,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Download file functionality
     document.querySelectorAll('.download-file').forEach(button => {
-        button.addEventListener('click', async () => {
+        button.addEventListener('click', () => {
             const file = button.getAttribute('data-file');
             const fileUrl = `${baseUrl}/json/${file}`;
             
-            try {
-                const response = await fetch(fileUrl);
-                const blob = await response.blob();
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.style.display = 'none';
-                a.href = url;
-                a.download = file;
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(url);
-                showToast(`Downloading ${file}`);
-            } catch (error) {
-                console.error('Download error:', error);
-                showToast('Failed to download file!');
-            }
+            // Create a temporary anchor element
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = fileUrl;
+            a.download = file;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            showToast(`Downloading ${file}`);
         });
     });
     
@@ -120,47 +133,71 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', async () => {
             const file = button.getAttribute('data-file');
             const fileNameWithoutExt = file.replace('.json', '');
-            const previewElement = document.getElementById(`preview-${fileNameWithoutExt}`);
-            const previewContent = previewElement.querySelector('.preview-content');
+            const previewRow = document.getElementById(`preview-row-${fileNameWithoutExt}`);
             
-            // Toggle preview
-            if (previewElement.classList.contains('hidden')) {
-                previewElement.classList.remove('hidden');
+            // Toggle preview row visibility
+            if (previewRow.classList.contains('hidden')) {
+                previewRow.classList.remove('hidden');
                 
-                // Fetch and display the JSON data
-                const data = await fetchJsonFile(file);
-                if (data) {
-                    previewContent.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-                } else {
-                    previewContent.innerHTML = '<div class="error">Error loading JSON data</div>';
+                // Fetch and display the JSON data if on the data tab
+                const dataTab = previewRow.querySelector('.tab-content[data-tab="data"]');
+                const jsonPreview = dataTab.querySelector('.json-preview');
+                
+                if (dataTab.classList.contains('active')) {
+                    jsonPreview.innerHTML = '<div class="loading">Loading data...</div>';
+                    
+                    const data = await fetchJsonFile(file);
+                    if (data) {
+                        jsonPreview.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                    } else {
+                        jsonPreview.innerHTML = '<div class="error">Error loading JSON data</div>';
+                    }
                 }
                 
-                // Change button text
-                button.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Data';
+                // Change button icon
+                button.innerHTML = '<i class="fas fa-eye-slash"></i>';
+                button.title = "Hide Data";
             } else {
-                previewElement.classList.add('hidden');
-                button.innerHTML = '<i class="fas fa-eye"></i> View Data';
+                previewRow.classList.add('hidden');
+                button.innerHTML = '<i class="fas fa-eye"></i>';
+                button.title = "View Data";
             }
         });
     });
     
-    // Tab functionality for examples
+    // Tab functionality for previews
     document.querySelectorAll('.tab-btn').forEach(tab => {
-        tab.addEventListener('click', (e) => {
+        tab.addEventListener('click', async (e) => {
             const tabName = tab.getAttribute('data-tab');
-            const parentRow = tab.closest('.file-row');
+            const file = tab.getAttribute('data-file');
+            const previewRow = tab.closest('tr');
             
             // Update active tab
-            parentRow.querySelectorAll('.tab-btn').forEach(t => {
+            previewRow.querySelectorAll('.tab-btn').forEach(t => {
                 t.classList.remove('active');
             });
             tab.classList.add('active');
             
             // Show active content
-            parentRow.querySelectorAll('.tab-content').forEach(content => {
+            previewRow.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
             });
-            parentRow.querySelector(`.tab-content[data-tab="${tabName}"]`).classList.add('active');
+            
+            const activeContent = previewRow.querySelector(`.tab-content[data-tab="${tabName}"]`);
+            activeContent.classList.add('active');
+            
+            // If data tab is selected and hasn't been loaded yet, load the data
+            if (tabName === 'data' && activeContent.querySelector('.json-preview .loading')) {
+                const jsonPreview = activeContent.querySelector('.json-preview');
+                
+                // Fetch and display the JSON data
+                const data = await fetchJsonFile(file);
+                if (data) {
+                    jsonPreview.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                } else {
+                    jsonPreview.innerHTML = '<div class="error">Error loading JSON data</div>';
+                }
+            }
         });
     });
 });
