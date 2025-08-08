@@ -194,7 +194,56 @@
         },
 		"extra": "Required Court Case"
 	},
-    
+	"004": {
+		"id": "004",
+		"charge": "Domestic Terror Threats",
+		"type": "F",
+		"class": {
+			"A": true,
+			"B": true,
+			"C": true
+		},
+		"offence": {
+			"1": true,
+			"2": false,
+			"3": false
+		},
+		"time": {
+			"days": 9999,
+			"hours": 0,
+			"min": 0
+		},
+		"maxtime": {
+			"days": 9999,
+			"hours": 0,
+			"min": 0
+		},
+		"points": {
+			"A": 0,
+			"B": 0,
+			"C": 0
+		},
+		"fine": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"impound": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+		"suspension": {
+			"1": 0,
+			"2": 0,
+			"3": 0
+		},
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+		"extra": "Required Court Case"
+	},
 	"101": {
 		"id": "101",
 		"charge": "Tax Evasion",
@@ -490,8 +539,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": true,
-            "cost": 150000
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -916,7 +965,7 @@
 			"min": 0
 		},
 		"points": {
-			"A": 0,
+			"A": 3,
 			"B": 0,
 			"C": 0
 		},
@@ -1286,8 +1335,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 500000 
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -1306,8 +1355,8 @@
 			"3": false
 		},
 		"time": {
-			"days": 2,
-			"hours": 0,
+			"days": 0,
+			"hours": 6,
 			"min": 0
 		},
 		"maxtime": {
@@ -1347,7 +1396,7 @@
 		"type": "M",
 		"class": {
 			"A": false,
-			"B": true,
+			"B": false,
 			"C": true
 		},
 		"offence": {
@@ -1397,7 +1446,7 @@
 		"type": "F",
 		"class": {
 			"A": false,
-			"B": true,
+			"B": false,
 			"C": true
 		},
 		"offence": {
@@ -1418,7 +1467,7 @@
 		"points": {
 			"A": 0,
 			"B": 0,
-			"C": 0
+			"C": 2
 		},
 		"fine": {
 			"1": 0,
@@ -2242,8 +2291,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": false,
-            "cost": 0
+            "auto": true,
+            "cost": 100000
         },
 		"extra": "N/A"
 	},
@@ -2877,8 +2926,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 750000
+            "auto": false,
+            "cost": 0
         },
 		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
 	},
@@ -2977,8 +3026,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": 2,
-            "cost": 600000
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -3262,8 +3311,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": true,
-            "cost": 600000
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -3312,8 +3361,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": true,
-            "cost": 800000
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -3658,7 +3707,7 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 200000
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -3789,7 +3838,7 @@
 		"points": {
 			"A": 0,
 			"B": 0,
-			"C": 4
+			"C": 2
 		},
 		"fine": {
 			"1": 0,
@@ -4858,7 +4907,7 @@
 		},
         "bail": {
             "auto": true,
-            "cost": 150000
+            "cost": 200000
         },
 		"extra": "Misdemeanor version for property damage only. Use 408F for injuries/deaths."
 	},
@@ -4908,7 +4957,7 @@
 		},
         "bail": {
             "auto": true,
-            "cost": 350000
+            "cost": 400000
         },
 		"extra": "Felony version for accidents involving injury or death."
 	},
@@ -5894,7 +5943,7 @@
 		},
         "bail": {
             "auto": true,
-            "cost": 200000
+            "cost": 25000
         },
 		"extra": "Third offense upgraded to Felony [2]"
 	},
@@ -6258,7 +6307,7 @@
 		},
         "bail": {
             "auto": true,
-            "cost": 1250000
+            "cost": 250000
         },
 		"extra": "N/A"
 	},
@@ -6308,7 +6357,7 @@
 		},
         "bail": {
             "auto": true,
-            "cost": 800000
+            "cost": 200000
         },
 		"extra": "(( Charge is suspended. DO NOT charge this on any person. ))"
 	},
@@ -6358,7 +6407,7 @@
 		},
         "bail": {
             "auto": 2,
-            "cost": 4000000
+            "cost": 500000
         },
 		"extra": "N/A"
 	},
@@ -7194,11 +7243,11 @@
                 "T": true
             },
             "cost": {
-                "A": 750000,
-                "B": 475000,
-                "C": 475000,
-                "D": 475000,
-                "T": 475000
+                "A": 500000,
+                "B": 470000,
+                "C": 470000,
+                "D": 470000,
+                "T": 470000
             }
         },
 		"points": {
@@ -7627,7 +7676,7 @@
 		},
         "bail": {
             "auto": {
-                "A": true,
+                "A": 2,
                 "B": true,
                 "C": true,
                 "D": true,
@@ -7713,7 +7762,7 @@
 		},
         "bail": {
             "auto": true,
-            "cost": 25000
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -8240,8 +8289,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": true,
-            "cost": 350000
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -8290,8 +8339,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": true,
-            "cost": 350000
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
@@ -8340,8 +8389,8 @@
 			"3": 0
 		},
         "bail": {
-            "auto": true,
-            "cost": 500000
+            "auto": false,
+            "cost": 0
         },
 		"extra": "N/A"
 	},
