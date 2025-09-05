@@ -2,6 +2,7 @@
 	"000": {
 		"id": "000",
 		"charge": "UNKNOWN CHARGE",
+		"definition": "?",
 		"type": "?",
 		"class": {
 			"A": false,
@@ -47,6 +48,7 @@
 	"001": {
 		"id": "001",
 		"charge": "Treason",
+		"definition": "Any person who, owing allegiance to the United States, levies war against them or adheres to their enemies, giving them aid and comfort within the United States or elsewhere.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -97,6 +99,7 @@
 	"002": {
 		"id": "002",
 		"charge": "Espionage",
+		"definition": "Any person who knowingly communicates, transmits, or attempts to transmit or otherwise makes available to an unauthorized person or uses in any manner prejudicial to the safety or interest of the United States or for the benefit of a foreign country any classified information concerning defense information, healthcare installations and communication intelligence of the United States.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -147,6 +150,7 @@
 	"003": {
 		"id": "003",
 		"charge": "Domestic Terrorism",
+		"definition": "a) Any person who, with intent to intimidate or coerce a civilian population, or to influence a policy of a government, or any segment thereof, or to affect the conduct of a unit of government, commits or attempts to commit an act that would result in great bodily injury or death.\n\nb) Any person who, with intent to intimidate or coerce a civilian population, or to influence a policy of a government, or any segment thereof, or to affect the conduct of a unit of government, knowingly and willfully encourages, incites, or solicits another person to commit an act that would result in great bodily injury or death.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -197,6 +201,7 @@
 	"004": {
 		"id": "004",
 		"charge": "Domestic Terror Threats",
+		"definition": "Any person who willfully threatens to commit a crime that will result in great bodily injury or death to another person, to intimidate or coerce a civilian population with specific intent that the statement, made verbally or in writing is to be taken as a threat.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -247,6 +252,7 @@
 	"101": {
 		"id": "101",
 		"charge": "Tax Evasion",
+		"definition": "a) Any person who knowingly, within the time required by law, fails to make, sign, rectify or file any return with the state, city, or any subdivisions thereof or with any public office.\n\nb) Any person who, with intent to avoid any tax, makes, renders, signs, or verifies any false or fraudulent return or statement or supplies any false or fraudulent information to the state, city, or any subdivisions thereof or with any public office.\n\nc) Any person who performs any licensed activity without a valid license and any subsequent operations denies taxes to the state, city, or any subdivisions thereof or with any public office.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -297,6 +303,7 @@
 	"102": {
 		"id": "102",
 		"charge": "Voter Fraud",
+		"definition": "Any person who attempts to add, subtract or delete votes or attempts to falsify the results of an election or otherwise attempts to dissuade or influence the election voting through coercion, persuasion, promises, bribes, threats, violence, fraud, or trickery.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -347,6 +354,7 @@
 	"103": {
 		"id": "103",
 		"charge": "Corruption of Public Office",
+		"definition": "Any person who, while employed by a municipal, county, or state level agency or organization, or any person acting in concert with a public servant’s act with the intent to defraud the government, or any segment thereof to obtain property, actual service, resources or preferential treatment by false or fraudulent pretenses, representations or promises.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -397,6 +405,7 @@
 	"104": {
 		"id": "104",
 		"charge": "Neglect of Public Duty",
+		"definition": "Any person who, while employed by a municipal, county, or state level agency, organization or other governmental instrumentality, either willfully or negligently refrains from performing a duty which is imposed upon him by law or is clearly inherent in the nature of his office, leading to the deterioration of public safety, risk of physical harm, actual physical harm, or a violation of this code.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -447,6 +456,7 @@
 	"105": {
 		"id": "105",
 		"charge": "Bribery of a Public Official",
+		"definition": "Any person who confers, or offers, or agrees to confer money, goods, services, benefits, or anything of value to a public employee to improperly influence that individual’s official action, opinion, judgment, decision, or exercise of discretion as a public servant.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -497,6 +507,7 @@
 	"106": {
 		"id": "106",
 		"charge": "Incitement To Riot",
+		"definition": "Any person who, with the intent to cause a riot, engages in tumultuous or violent conduct that urges a riot, or urges others to commit acts of force, violence, or destruction of property under circumstances that create public alarm.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -547,6 +558,7 @@
 	"107": {
 		"id": "107",
 		"charge": "Unlawful Assembly",
+		"definition": "a) Any person who refuses to disperse or leave a public facility or ground without possessing a valid permit and has been ordered to leave by law enforcement.\n\nb) Any person who knowingly assembles with two or more other persons with the intent to engage in conduct that would violate any criminal statute, or engage in conduct that recklessly creates a risk of public alarm, inconvenience, or annoyance, except peaceful gatherings for the purpose of lawful protest, expression of free speech, or any assembly conducted with a valid permit.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -597,6 +609,7 @@
 	"108": {
 		"id": "108",
 		"charge": "Tampering with Evidence",
+		"definition": "Any person who knowingly alters, modifies, manufactures, plants, places, destroys, damages, conceals, or moves anything used as evidence with the intent to prevent, mislead or hinder a legal proceeding or otherwise produce a deceptive effect at such proceeding.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -648,6 +661,7 @@
 	"109": {
 		"id": "109",
 		"charge": "Intimidating a Witness or Victim",
+		"definition": "Any person who knowingly and maliciously prevents or dissuades or who attempts to prevent or dissuade a witness or victim, from attending or providing testimony at any judicial proceeding or inquiry, or making a report that could lead to criminal action being taken.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -698,6 +712,7 @@
 	"110": {
 		"id": "110",
 		"charge": "Contempt of Court",
+		"definition": "a) Any person whose disorderly, contemptuous, or insolent behavior, committed during the sitting of a court, in its immediate view and presence directly tends to interrupt its proceedings or to impair the respect due to its authority.\n\nb) Any person who through the breach of the peace, noise, or other disturbance, directly tends to interrupt a court's proceedings.\n\nc) Any person who intentionally disobeys or resists the lawful process or other mandate of a court. This shall also extend to violations of court orders.\n\nd) Any person who knowingly publishes a false or grossly inaccurate report of a court's proceedings.\n\ne) Any person who refuses to pay their criminal or civil fines or fails to do so after being granted a payment plan for said fines.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -743,6 +758,7 @@
 	"111": {
 		"id": "111",
 		"charge": "Perjury",
+		"definition": "a) Any person who, having taken an oath that they will testify, declare, depose, or certify truly before any competent tribunal, officer, or in a court sitting willfully and contrary to the oath, states as true any material matter which they know to be false.\n\nb) Any person who, through written or spoken affidavit, knowingly supplies information that is false, incomplete, or willfully inaccurate, with intent to mislead or delay any process of court procedure.\n\nc) No person shall be convicted of perjury where proof of falsity rests solely upon contradiction by testimony of a single person other than the defendant. Proof of falsity may be established by direct or indirect evidence.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -793,6 +809,7 @@
 	"112F": {
 		"id": "112F",
 		"charge": "Obstruction of Public Duty (Felony)",
+		"definition": "(a) Any person who without a lawful excuse, through the use of coercion, violence, or by using means meant to delay the administration of public justice or interfere with the safety of a bystander or officer, willfully obstruct or delay a public servant in the performance of their duties, with the intent to cause grievous bodily harm, or death, to another.\n\n(b) Any person who without a lawful excuse, through the use of coercion, violence, or by using means meant to delay the administration of public justice or interfere with the safety of a bystander or officer, willfully obstruct or delay a public servant in the performance of their duties, with the intent to cause serious damage to property which exceeds $50,000, or some other serious loss which exceeds $100,000, or minor bodily harm to another.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -838,11 +855,12 @@
             "auto": true,
             "cost": 250000
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "For any violation(s) of provision (a) of this offense shall be liable under a Class A felony.\n\nFor any violation(s) of provision (b) of this offense shall be liable under a Class B felony."
 	},
 	"112M": {
 		"id": "112M",
 		"charge": "Obstruction of Public Duty (Misdemeanor)",
+		"definition": "(c) Any person who without a lawful excuse, through the use of coercion, violence, or by using means meant to delay the administration of public justice or interfere with the safety of a bystander or officer, willfully obstruct or delay a public servant in the performance of their duties, with the intent to:\n(i) cause some loss amounting to no more than $50,000, or\n(ii) subvert, or cause another to subvert, public order.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -888,11 +906,12 @@
             "auto": true,
             "cost": 250000
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "For any violation(s) of provision (c) of this offense shall be liable under a Class C misdemeanor."
 	},
 	"113M": {
 		"id": "113M",
 		"charge": "Obstructing a Peace Officer's Animal (Misdemeanor)",
+		"definition": "a) Any person who willfully and maliciously, and with no legal justification, interferes with or obstructs any animal being used by a peace officer in the discharge or attempted discharge of their duties by frightening, teasing, agitating, harassing, or hindering the animal.\n\nb) Any person who willfully with no legal justification, strikes, beats, kicks, cuts, stabs, shoots, poisons, or otherwise injures a peace officer's animal that is working at the supervision of a peace officer.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -938,11 +957,12 @@
             "auto": true,
             "cost": 250000
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "For any violation(s) of provision (a) and (b) this offense shall be liable under a Class B misdemeanor."
 	},
 	"113F": {
 		"id": "113F",
 		"charge": "Obstructing a Peace Officer's Animal (Felony)",
+		"definition": "a) Any person who willfully and maliciously, and with no legal justification, interferes with or obstructs any animal being used by a peace officer in the discharge or attempted discharge of their duties by frightening, teasing, agitating, harassing, or hindering the animal.\n\nb) Any person who willfully with no legal justification, strikes, beats, kicks, cuts, stabs, shoots, poisons, or otherwise injures a peace officer's animal that is working at the supervision of a peace officer.\n\nc) Any person who, in violation of provisions (a) and (b), and with intent to inflict that injury or death, personally causes the death, or serious physical injury including loss or impairment of function of any bodily member or serious crippling.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -988,11 +1008,12 @@
             "auto": true,
             "cost": 250000
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "For any violation(s) of provision (c) this offense shall be liable under a Class A felony."
 	},
 	"114": {
 		"id": "114",
 		"charge": "Escape From Lawful Custody",
+		"definition": "Any person arrested, booked, charged, or convicted of a criminal offense, and who thereafter escapes from a county or city jail, prison, detention facility, community service, or the custody of a correctional officer in charge of them.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1043,6 +1064,7 @@
 	"115": {
 		"id": "115",
 		"charge": "Evading a Peace Officer",
+		"definition": "Any person who, while operating or upon entering a motor vehicle, or bicycle and with the intent to evade, willfully flees or otherwise attempts to elude a pursuing peace officer.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1093,6 +1115,7 @@
 	"116": {
 		"id": "116",
 		"charge": "Resisting Arrest",
+		"definition": "Any person who intentionally delays, avoids, obstructs, prevents or attempts to prevent a peace officer from effecting the apprehension of himself or another person or in the discharge or attempted discharge of their duties. Shall extend to lying to a peace officer.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -1143,6 +1166,7 @@
 	"117": {
 		"id": "117",
 		"charge": "Lying to Government Agents",
+		"definition": "Any person who knowingly and willfully makes any materially false, fictitious or fraudulent statement or representation in any matter within the jurisdiction of the executive, legislative or judicial branch of the United States.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -1193,6 +1217,7 @@
 	"118": {
 		"id": "118",
 		"charge": "Misuse of an Emergency Hotline",
+		"definition": "Any person who uses a government hotline, intended for either emergency or non-emergency assistance, with a purpose other than contacting the government with a legitimate concern or ushering for immediate assistance, including prank calls, jokes, or any other kind of distraction.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -1243,6 +1268,7 @@
 	"119": {
 		"id": "119",
 		"charge": "False Impersonation",
+		"definition": "a) Any person(s) who presents themselves as another or pretends to be a representative of some person or organization or impersonates  another  by  communication by  internet  website  or electronic means and does an act in such pretended capacity with intent to obtain a benefit or to injure or defraud another.\n\nb) Any person(s) who falsely represents themselves as a law enforcement officer, by wearing or displaying any uniform, badge, or other insignia that is commonly associated with such an officer, or by verbally or through their actions indicating that they are a law enforcement officer, with the intent to deceive another person into believing that they are a law enforcement officer and submitting to their authority.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -1288,11 +1314,12 @@
             "auto": true,
             "cost": 150000
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "N/A"
 	},
 	"120": {
 		"id": "120",
 		"charge": "Assault & Battery on a Government Worker",
+		"definition": "a) Any person who engages in willful and unlawful use of physical force upon a government worker.\nb) Any person who unlawfully attempts to commit a violent injury on a government worker or attempts to put a government worker they are in the presence of in reasonable fear of physical injury.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -1343,6 +1370,7 @@
 	"121": {
 		"id": "121",
 		"charge": "Forgery",
+		"definition": "Any person who knowingly creates, completes or alters a written instrument, with the intent to defraud, deceive or injure another.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -1393,6 +1421,7 @@
 	"122M": {
 		"id": "122M",
 		"charge": "Fraud",
+		"definition": "a) Any person who knowingly, by any means of false representation by words, conduct, misleading allegation or by concealment of facts or written instruments attempts to defraud any other person of money, labor, or property, whether real or personal.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -1438,11 +1467,12 @@
             "auto": false,
             "cost": 0
         },
-		"extra": "N/A"
+		"extra": "For any violation(s) of provision (a) this offense shall be liable under a Class C misdemeanor."
 	},
 	"122F": {
 		"id": "122F",
 		"charge": "Fraud",
+		"definition": "b) Fraud resulting in the loss of $15,000 or more in monetary value will be considered a felony charge.\n\nc) Any person having on display on their own vehicle, an identification plate registered to another vehicle owned by themselves.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1488,11 +1518,12 @@
             "auto": false,
             "cost": 0
         },
-		"extra": "N/A"
+		"extra": "For any violation(s) of provisions (b) or (c) this offense shall be liable under a Class C felony."
 	},
 	"123": {
 		"id": "123",
 		"charge": "Money Laundering",
+		"definition": "Any person who knowing that a property or monetary instruments represent the proceeds of criminal conduct, or the criminal sale of a controlled substance or weapons, or an act of terrorism, they conduct such financial transactions involving such proceeds or transports, transmits, or  transfers such monetary instruments with the intent to promote the carrying on of criminal conduct, knowing such transactions in whole or in part are designed to conceal or disguise the nature, the location, the source, the ownership or the control of the proceeds of criminal conduct, or avoid any transaction reporting requirement imposed by law.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1538,11 +1569,12 @@
             "auto": true,
             "cost": 500000
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "The total value of the property involved in such financial transaction(s) dictates the charging guidelines, check the penal code."
 	},
 	"124": {
 		"id": "124",
 		"charge": "Defacing U.S. Currency",
+		"definition": "Any person who mutilates, cuts, defaces, disfigures, destroys, or perforates, or unites or cements together, or does any other thing to any bank bill or note with intent to render such bank bill or note unusable.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -1593,6 +1625,7 @@
 	"125": {
 		"id": "125",
 		"charge": "Disturbing the Peace",
+		"definition": "Any person(s) who engages in the following: fighting, violence, tumultuous or threatening behavior, unreasonable noise, abusive or obscene language/gestures in public.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -1643,6 +1676,7 @@
 	"126": {
 		"id": "126",
 		"charge": "Racketeering",
+		"definition": "(a) It shall be unlawful for any person, group of persons, or organization(s), to knowingly engage or participate in, or conspire to engage or participate in, a pattern of racketeering activity, or through the collection of an unlawful debt, in the service of, association with or employment by any enterprise.\n\n(b) It shall be unlawful for any person through a pattern of criminal racketeering activity or through the collection of an unlawful debt to acquire or maintain, directly or indirectly, any interest in or control of any enterprise which is engaged in, or the activities of which affect, commercial activity.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -1688,11 +1722,12 @@
             "auto": 2,
             "cost": 500000
         },
-		"extra": "N/A"
+		"extra": "'Enterprise' and all variations shall reference any coordinated, cooperative or collaborative activity undertaken by two or more persons associated by partnership, corporation, association, or other legal entity, and any union or group of individuals associated in fact but not necessarily through a legal entity with the intention of achieving financial or other material gain for the affiliated persons.\n\n'Racketeering activity' and all variations shall refer to any act involving the commission or attempted commission, a conspiracy to commit, threat to commit or to intentionally aid, solicit, order, coerce or intimidate another person to commit any unlawful activities defined within any of the following listed within the Penal Code.\n\n'Pattern of racketeering activity' and all variations shall refer to a minimum of two acts of racketeering activity, one of which occurred after the effective date of this section and the last of which occurred within twenty days after the commission of a prior act of racketeering activity, excluding any period of imprisonment.\n\n'Unlawful debt' and all variations shall reference any money or other things of value constituting principal or interest of a debt that is incurred or contracted in violation of any of the aforementioned activities."
 	},
 	"127": {
 		"id": "127",
 		"charge": "Violation of EFCE Act - Signal Jamming",
+		"definition": "a) Any person who knowingly and willfully—without legal justification or exemption—manufactures, produces, processes, or prepares a signal jammer which violates the provisions of the EFCE Act of 2023.\n\nb) Any person who knowingly and willfully—without legal justification or exemption—possesses, sells, distributes, advertises, or markets a signal jammer device which violations the provisions of the EFCE Act of 2023. Any individual charged with sales also qualifies to be charged with possession.\n\nc) Any person who knowingly and willfully—without legal justification or exemption—utilizes, employs, operates, or exploits a signal jammer to effect, manipulate, distort, or jam any communications system or alarm system which violates the provisions of the EFCE Act.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1738,11 +1773,12 @@
             "auto": true,
             "cost": 75000
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "N/A"
 	},
 	"128": {
 		"id": "128",
 		"charge": "Violation of EFCE Act - Card Skimming",
+		"definition": "a) Any person who knowingly and willfully—without legal justification or exemption—manufactures, produces, processes, or prepares a card skimmer which violates the provisions of the EFCE Act.\n\nb) Any person who knowingly and willfully—without legal justification or exemption—possesses, sells, distributes, advertises, or markets a card skimmer device which violates the provisions of the EFCE Act. Any individual charged with sales also qualifies to be charged with possession.\n\nc) Any person who knowingly and willfully—without legal justification or exemption—possesses or uses a card skimmer to obtain financial information from individuals without their knowledge or consent, which violates the provisions of the EFCE Act.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1788,11 +1824,12 @@
             "auto": true,
             "cost": 75000
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "N/A"
 	},
 	"129": {
 		"id": "129",
 		"charge": "Violation of EFCE Act - Vehicle Tracking",
+		"definition": "a) Any person who installs or plants an electronic tracking device on any vehicle or possession which violates the provisions of the EFCE Act.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1843,6 +1880,7 @@
 	"130": {
 		"id": "130",
 		"charge": "Rescuing A Prisoner",
+		"definition": "Any person who rescues or attempts to rescue, or aids another person in rescuing or attempting to rescue any prisoner from any prison, or prison road camp or any jail or county road camp, or from any officer or person having him or her in lawful custody.\n\nAny person who enters into a designated staff only zone as laid out by the Department of Corrections and Rehabilitation Authorization Act of 2023, without authorization from the Department of Corrections and Rehabilitation.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1893,6 +1931,7 @@
 	"131": {
 		"id": "131",
 		"charge": "Bringing Contraband Into A Correctional Facility",
+		"definition": "Any person(s) who knowingly brings into any detention facility as defined in the DCRA Act of 2023,  any controlled substances as defined in Schedule I of Drug Enforcement and Prevention Act, or any device, contrivance, instrument, or paraphernalia intended to be used for unlawfully injecting or consuming any drug other than controlled substances, or any alcoholic beverages, or is in possession of any of the aforementioned contraband within the aforementioned locations, without having authority so to do by the rules of the Department of Corrections, or by the specific authorization of the warden, superintendent, jailer, or other person in charge of the facility. The highest category in possession determines the overall penalty.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -1999,6 +2038,7 @@
 	"132": {
 		"id": "132",
 		"charge": "Possession Of Communications In A Correctional Facility",
+		"definition": "(a) Any person in a local correctional facility who possesses a wireless communication device, including, but not limited to, a cellular telephone, pager, or wireless Internet device, who is not authorized to possess that item is guilty of a misdemeanor, punishable by a fine of not more than one thousand dollars ($1,000).\n\n(b) Money collected pursuant to this section shall be placed into the inmate welfare fund, as specified in Section 4025.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -2049,6 +2089,7 @@
 	"133": {
 		"id": "133",
 		"charge": "Possession Of Tobacco In A Correctional Facility",
+		"definition": "(a) Any person housed in a local correctional facility who possesses any tobacco products in any form, including snuff products, smoking paraphernalia, any device that is intended to be used for ingesting or consuming tobacco, or any container or dispenser used for any of those products, is guilty of an infraction, punishable by a fine not exceeding two hundred fifty dollars ($250).\n\n(b) Subdivision (a) shall only apply to a person in a local correctional facility in a county in which the city council or county commission has adopted an ordinance or passed a resolution banning tobacco in its correctional facilities.\n\n(c) Money collected pursuant to this section shall be placed into the inmate welfare fund, as specified in Section 4025.",
 		"type": "I",
 		"class": {
 			"A": false,
@@ -2094,11 +2135,12 @@
             "auto": false,
             "cost": 0
         },
-		"extra": "Check Penal Code for any additional provisions/altered sentencing guidelines"
+		"extra": "N/A"
 	},
 	"134": {
 		"id": "134",
 		"charge": "Possession Of Handcuff Keys In A Correctional Facility",
+		"definition": "(d) Any person housed in a local correctional facility who possesses a handcuff key who is not authorized to possess that item is guilty of a misdemeanor, punishable by imprisonment in a county jail not exceeding six months, or by a fine of up to one thousand dollars ($1,000), or by both that imprisonment and fine. As used in this subdivision, “handcuff key” means any device designed or intended to open or unlatch a handcuff.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -2149,6 +2191,7 @@
 	"135": {
 		"id": "135",
 		"charge": "Murder of a Peace Officer Canine",
+		"definition": "Any person(s) who intentionally or knowingly, without lawful cause or justification, causes death upon a peace officer canine.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -2199,6 +2242,7 @@
 	"136": {
 		"id": "136",
 		"charge": "Aggravated Battery of a Peace Officer Canine",
+		"definition": "Any person(s) who intentionally or knowingly, without lawful cause or justification, causes great bodily harm or permanent disability upon a peace officer canine, with or without a deadly weapon.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -2249,6 +2293,7 @@
 	"137": {
 		"id": "137",
 		"charge": "Battery of a Peace Officer Canine",
+		"definition": "Any person(s) who intentionally or knowingly maliciously touches, strikes, or causes bodily harm to a peace officer canine commits a misdemeanor without a deadly weapon.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -2299,6 +2344,7 @@
 	"138": {
 		"id": "138",
 		"charge": "Obstruction of a Peace Officer Canine",
+		"definition": "Any person(s) who intentionally or knowingly maliciously harasses, teases, interferes with, or attempts to interfere with a peace officer canine while the working dog is in the performance of its duties commits a misdemeanor.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -2349,6 +2395,7 @@
 	"139": {
 		"id": "139",
 		"charge": "Misuse of the Mobile Data Computer",
+		"definition": "a) Any person(s) who, accesses, uses, alters, damages, deletes, or disrupts any function of an Mobile Data Computer (MDC) system, network, or data, with the intent to hinder or obstruct lawful operations, or to appropriate the MDC for personal, non-official, or criminal activities.\n\nb) Any person(s) who utilizes the MDC system or network to facilitate the commission of any crime, including fraud, theft, or unauthorized dissemination of personal or sensitive information.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -2399,6 +2446,7 @@
 	"140": {
 		"id": "140",
 		"charge": "Unauthorized Sharing of Information from the Mobile Data Computer",
+		"definition": "a) Any person(s) who, outside their scope of employment, shares, disseminates, or publishes any information from the Mobile Data Computer (MDC) system, network, or data, regardless of its classification or sensitivity, not intended for public release or personal use.\n\nb) Any person(s) who negligently or intentionally shares, disseminates, or publishes any information from the MDC that compromises public safety, the integrity of investigations, or the security of the MDC system, including personal, contact, or property details.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -2449,6 +2497,7 @@
 	"141": {
 		"id": "141",
 		"charge": "Unlawful Communication with an Inmate",
+		"definition": "Every person who, without the permission of the warden or other officer in charge of any detention facility as defined in the DCRA Act of 2024, communicates with any prisoner or person detained therein, or brings therein or takes therefrom any letter, writing, literature, or reading matter to or from any prisoner or person confined therein, is guilty of a misdemeanor.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -2498,7 +2547,8 @@
 	},
 	"142M": {
 		"id": "142M",
-		"charge": "Failure to Appear at Cour (Misdeamanor)",
+		"charge": "Failure to Appear at Court (Misdeamanor)",
+		"definition": "a) Every person who is charged with or convicted of the commission of a misdemeanor who is released from custody on his or her own recognizance and who in order to evade the process of the court willfully fails to appear as required, is guilty of a misdemeanor.",
 		"type": "M",
 		"class": {
 			"A": false,
@@ -2548,7 +2598,8 @@
 	},
 	"142F": {
 		"id": "142F",
-		"charge": "Failure to Appear at Cour (Felony)",
+		"charge": "Failure to Appear at Court (Felony)",
+		"definition": "(b) Every person who is charged with or convicted of the commission of a felony who is released from custody on his or her own recognizance and who in order to evade the process of the court willfully fails to appear as required, is guilty of a felony.",
 		"type": "F",
 		"class": {
 			"A": false,
@@ -2599,6 +2650,7 @@
 	"201": {
 		"id": "201",
 		"charge": "Capital Murder",
+		"definition": "a) Any person who deliberately takes the life of a police officer, firefighter, paramedic, prosecutor, judge, juror, or other elected official while in the commission of their duty, or any witness in a criminal proceeding.\n\nb) Any person who uses especially heinous, atrocious, or cruel acts, manifesting exceptional depravity in the commission of murder in the first or second degree, or any murder that results from a murder-for-hire contract. In case of contract murders, both the killer and the person ordering the contract may be charged as a principal.\n\nc) Any person who purposely kills more than one individual and the murders are committed pursuant to the same scheme or course of conduct.\n\nd) Any incarcerated person who, while serving a life sentence, causes the death of another human being, through premeditated actions with malice aforethought.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -2639,11 +2691,12 @@
             "auto": false,
             "cost": 0
         },
-		"extra": "(( CK = Required Case ))"
+		"extra": "(( CK = Required Case ))\n(( Death penalty for this charge requires FM Permission ))"
 	},
 	"202": {
 		"id": "202",
 		"charge": "First Degree Murder",
+		"definition": "Any person who causes the death of another human being, through premeditated actions with malice aforethought.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -2689,6 +2742,7 @@
 	"203": {
 		"id": "203",
 		"charge": "Second Degree Murder",
+		"definition": "Any person who causes the death of another human being, through unpremeditated actions with malice aforethought.",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -2734,6 +2788,7 @@
 	"204": {
 		"id": "204",
 		"charge": "Voluntary Manslaughter",
+		"definition": "Any person who engages in the unlawful killing of a human being without malice upon a sudden quarrel or heat of passion, or based on an honest but unreasonable belief that deadly force is necessary (imperfect self-defense). ",
 		"type": "F",
 		"class": {
 			"A": true,
@@ -2784,6 +2839,7 @@
 	"205": {
 		"id": "205",
 		"charge": "Involuntary Manslaughter",
+		"definition": "Any person who engages in the unintentional killing of a human being without malice, either caused by an unlawful act that is not a felony, or a negligent act or failure to act.",
 		"type": "F",
 		"class": {
 			"A": true,
