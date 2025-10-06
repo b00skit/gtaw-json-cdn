@@ -1109,7 +1109,9 @@
             "auto": 2,
             "cost": 500000
         },
-        "extra": "N/A"
+        "extra": "N/A",
+        "code_enhancement": "STREETS",
+        "code_enhancement_count": 3,
     },
     "116": {
         "id": "116",
@@ -5006,7 +5008,8 @@
             "auto": true,
             "cost": 200000
         },
-        "extra": "Misdemeanor version for property damage only. Use 408F for injuries/deaths."
+        "extra": "Misdemeanor version for property damage only. Use 408F for injuries/deaths.",
+        "code_enhancement": "STREETS"
     },
     "408F": {
         "id": "408F",
@@ -5057,7 +5060,8 @@
             "auto": true,
             "cost": 400000
         },
-        "extra": "Felony version for accidents involving injury or death."
+        "extra": "Felony version for accidents involving injury or death.",
+        "code_enhancement": "STREETS"
     },
     "409": {
         "id": "409",
@@ -5596,7 +5600,8 @@
             "auto": true,
             "cost": 500000
         },
-        "extra": "N/A"
+        "extra": "N/A",
+        "code_enhancement": "STREETS"
     },
     "421": {
         "id": "421",
@@ -6020,7 +6025,8 @@
             "auto": true,
             "cost": 200000
         },
-        "extra": "Third offense upgraded to Felony [2]"
+        "extra": "Third offense upgraded to Felony [2]",
+        "code_enhancement": "STREETS"
     },
     "431": {
         "id": "431",
@@ -6117,7 +6123,8 @@
             "auto": true,
             "cost": 500000
         },
-        "extra": "N/A"
+        "extra": "N/A",
+        "code_enhancement": "STREETS"
     },
     "432F": {
         "id": "432F",
@@ -6168,7 +6175,8 @@
             "auto": false,
             "cost": 0
         },
-        "extra": "Evading charged additionally. For fleeing from officers after street race."
+        "extra": "Evading charged additionally. For fleeing from officers after street race.",
+        "code_enhancement": "STREETS"
     },
     "433": {
         "id": "433",
@@ -6675,7 +6683,8 @@
             "auto": true,
             "cost": 350000
         },
-        "extra": "14 day impound for evading, plus Evading a Peace Officer charge added separately"
+        "extra": "14 day impound for evading, plus Evading a Peace Officer charge added separately",
+        "code_enhancement": "STREETS"
     },
     "501": {
         "id": "501",
