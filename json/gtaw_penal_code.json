@@ -6031,7 +6031,7 @@
     "431": {
         "id": "431",
         "charge": "Refusal to Submit to Testing",
-        "definition": "Any person who, having been lawfully requested by a peace officer to participate in a standard field sobriety test or to provide a sample of their breath, blood, or other bodily substances for chemical testing, refuses or fails to comply with the request.",
+        "definition": "Any person who, having been requested by a peace officer to provide a breath sample pursuant to a lawful § 430 arrest, or to provide a blood sample or other bodily fluid sample pursuant to a search warrant or exigent circumstances, refuses or fails to comply with the request.",
         "type": "M",
         "class": {
             "A": false,
@@ -8823,5 +8823,107 @@
             "cost": 500000
         },
         "extra": "N/A"
+    },
+    "713M": {
+        "id": "713M",
+        "charge": "Possession Of A Weapon on School Grounds (Misdemeanor)",
+        "definition": "(b) Any person who brings or possesses a dirk, dagger, ice pick, knuckledusters, item or weapon having a blade, folding knife with a blade that locks into place, razor with an unguarded blade, taser, or stun gun, any instrument that expels a metallic projectile, such as a BB or a pellet, through the force of air pressure, CO2 pressure, or spring action, or any spot marker on the grounds of, or within, a public or private elementary, secondary, or post secondary school, or in a public or private university or college, or its zones.\n\n(d) This section does not apply to any person who brings or possesses a weapon on the grounds of, or within, a public or private elementary, secondary, or post secondary school, or in a public or private university or college, with the written permission of its board of regents, school board, chancellor or principle.\n\n(e) This section shall not be construed to prohibit a person who is otherwise authorized by law to possess a firearm from transporting or carrying a firearm on the grounds of a public or private school, or a public or private university or college, if the firearm is contained within a locked container or within the trunk of a motor vehicle.",
+        "type": "F",
+        "class": {
+            "A": false,
+            "B": false,
+            "C": true
+        },
+        "offence": {
+            "1": true,
+            "2": false,
+            "3": false
+        },
+        "time": {
+            "days": 1,
+            "hours": 0,
+            "min": 0
+        },
+        "maxtime": {
+            "days": 3,
+            "hours": 0,
+            "min": 0
+        },
+        "points": {
+            "A": 0,
+            "B": 0,
+            "C": 0
+        },
+        "fine": {
+            "1": 0,
+            "2": 0,
+            "3": 0
+        },
+        "impound": {
+            "1": 0,
+            "2": 0,
+            "3": 0
+        },
+        "suspension": {
+            "1": 0,
+            "2": 0,
+            "3": 0
+        },
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+        "extra": "N/A"
+    },
+    "713F": {
+        "id": "713F",
+        "charge": "Possession Of A Weapon on School Grounds (Felony)",
+        "definition": "(a) Any person who brings or possesses a firearm on the grounds of, or within, a public or private elementary, secondary, or post secondary school, or in a public or private university or college, or its zones.\n\n(c) Any person who is holding, drawing or otherwise threatning any individual with a dirk, dagger, ice pick, knuckledusters, item or weapon having a blade, folding knife with a blade that locks into place, razor with an unguarded blade, taser, or stun gun, any instrument that expels a metallic projectile, such as a BB or a pellet, through the force of air pressure, CO2 pressure, or spring action, or any spot marker on the grounds of, or within, a public or private elementary, secondary, or post secondary school, or in a public or private university or college, or its zones.\n\n(d) This section does not apply to any person who brings or possesses a weapon on the grounds of, or within, a public or private elementary, secondary, or post secondary school, or in a public or private university or college, with the written permission of its board of regents, school board, chancellor or principle.\n\n(e) This section shall not be construed to prohibit a person who is otherwise authorized by law to possess a firearm from transporting or carrying a firearm on the grounds of a public or private school, or a public or private university or college, if the firearm is contained within a locked container or within the trunk of a motor vehicle.",
+        "type": "F",
+        "class": {
+            "A": false,
+            "B": false,
+            "C": true
+        },
+        "offence": {
+            "1": true,
+            "2": false,
+            "3": false
+        },
+        "time": {
+            "days": 2,
+            "hours": 0,
+            "min": 0
+        },
+        "maxtime": {
+            "days": 6,
+            "hours": 0,
+            "min": 0
+        },
+        "points": {
+            "A": 0,
+            "B": 0,
+            "C": 4
+        },
+        "fine": {
+            "1": 0,
+            "2": 0,
+            "3": 0
+        },
+        "impound": {
+            "1": 0,
+            "2": 0,
+            "3": 0
+        },
+        "suspension": {
+            "1": 0,
+            "2": 0,
+            "3": 0
+        },
+        "bail": {
+            "auto": false,
+            "cost": 0
+        },
+        "extra": "Check Penal Code for any additional provisions/altered sentencing guidelines."
     }
 }
