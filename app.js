@@ -16,6 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
             toast.classList.add('hidden');
         }, duration);
     }
+
+    function escapeHtml(text) {
+        if (!text) return '';
+        return text
+            .toString()
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
     
     function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
@@ -53,12 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(`${baseUrl}/serve.php?file=${file}`);
             if (!response.ok) {
+                if (response.status === 429) {
+                    const errObj = await response.json().catch(() => null);
+                    if (errObj && errObj.error) {
+                        return { success: false, error: errObj.error, isRateLimit: true };
+                    }
+                }
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            return await response.json();
+            const data = await response.json();
+            return { success: true, data };
         } catch (error) {
             console.error('Error fetching JSON:', error);
-            return null;
+            return { success: false, error: error.message || 'Error loading JSON data' };
         }
     }
     
@@ -146,11 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (dataTab.classList.contains('active')) {
                     jsonPreview.innerHTML = '<div class="loading">Loading data...</div>';
                     
-                    const data = await fetchJsonFile(file);
-                    if (data) {
-                        jsonPreview.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                    const result = await fetchJsonFile(file);
+                    if (result.success) {
+                        jsonPreview.innerHTML = `<pre>${JSON.stringify(result.data, null, 2)}</pre>`;
                     } else {
-                        jsonPreview.innerHTML = '<div class="error">Error loading JSON data</div>';
+                        const errorClass = result.isRateLimit ? 'rate-limit-error' : 'error';
+                        jsonPreview.innerHTML = `<div class="${errorClass}"><i class="fas fa-exclamation-triangle"></i> ${escapeHtml(result.error)}</div>`;
                     }
                 }
                 
@@ -191,11 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const jsonPreview = activeContent.querySelector('.json-preview');
                 
                 // Fetch and display the JSON data
-                const data = await fetchJsonFile(file);
-                if (data) {
-                    jsonPreview.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                const result = await fetchJsonFile(file);
+                if (result.success) {
+                    jsonPreview.innerHTML = `<pre>${JSON.stringify(result.data, null, 2)}</pre>`;
                 } else {
-                    jsonPreview.innerHTML = '<div class="error">Error loading JSON data</div>';
+                    const errorClass = result.isRateLimit ? 'rate-limit-error' : 'error';
+                    jsonPreview.innerHTML = `<div class="${errorClass}"><i class="fas fa-exclamation-triangle"></i> ${escapeHtml(result.error)}</div>`;
                 }
             }
         });

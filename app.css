@@ -457,3 +457,134 @@ footer {
         overflow-x: auto;
     }
 }
+
+/* Bandwidth Usage Widget */
+.bandwidth-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: var(--box-shadow);
+    border-left: 4px solid var(--primary-color);
+}
+
+.bandwidth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 12px;
+}
+
+.bandwidth-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bandwidth-title i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.bandwidth-title h2 {
+    color: var(--dark-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.ip-display {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.ip-display code {
+    background-color: var(--light-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.bandwidth-bars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.bandwidth-bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.bar-name {
+    color: var(--dark-color);
+}
+
+.bar-value {
+    color: #64748b;
+}
+
+.progress-track {
+    background-color: var(--light-color);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    background-color: var(--success-color);
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.4s ease-out;
+}
+
+.progress-fill.warning {
+    background-color: #f59e0b; /* Amber */
+}
+
+.progress-fill.critical {
+    background-color: #ef4444; /* Red */
+}
+
+/* Rate Limit / Error States */
+.rate-limit-error {
+    background-color: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--border-radius);
+    color: #b91c1c;
+    padding: 20px;
+    margin: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rate-limit-error i {
+    font-size: 1.25rem;
+}
+
+/* Responsive adjustments for bandwidth */
+@media (max-width: 768px) {
+    .bandwidth-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .bandwidth-bars {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}

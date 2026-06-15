@@ -33,5 +33,43 @@ if (empty($file) || !file_exists($filePath) || !preg_match('/\.json$/', $file)) 
     exit;
 }
 
+// Include bandwidth manager
+require_once __DIR__ . '/bandwidth.php';
+$ip = BandwidthManager::getClientIp();
+$bandwidthManager = new BandwidthManager();
+
+// Get usage and size
+$fileSize = filesize($filePath);
+$usage = $bandwidthManager->getUsage($ip);
+
+// Check daily limit
+if (($usage['daily_bytes'] + $fileSize) > BandwidthManager::DAILY_LIMIT) {
+    http_response_code(429);
+    echo json_encode([
+        'error' => 'Daily bandwidth limit exceeded. IPs are limited to 500MB per day.',
+        'ip' => $ip,
+        'current_usage_daily' => formatBandwidthBytes($usage['daily_bytes']),
+        'limit_daily' => formatBandwidthBytes(BandwidthManager::DAILY_LIMIT),
+        'file_size' => formatBandwidthBytes($fileSize)
+    ]);
+    exit;
+}
+
+// Check weekly limit
+if (($usage['weekly_bytes'] + $fileSize) > BandwidthManager::WEEKLY_LIMIT) {
+    http_response_code(429);
+    echo json_encode([
+        'error' => 'Weekly bandwidth limit exceeded. IPs are limited to 1GB per week.',
+        'ip' => $ip,
+        'current_usage_weekly' => formatBandwidthBytes($usage['weekly_bytes']),
+        'limit_weekly' => formatBandwidthBytes(BandwidthManager::WEEKLY_LIMIT),
+        'file_size' => formatBandwidthBytes($fileSize)
+    ]);
+    exit;
+}
+
+// Log request and served bytes
+$bandwidthManager->logRequest($ip, $file, $fileSize);
+
 // Read and output the file
 echo file_get_contents($filePath);

@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/bandwidth.php';
+
 // Set base URL - Change this to your actual domain when deploying
 $base_url = "https://sys.booskit.dev/cdn";
 
@@ -77,6 +79,45 @@ function formatBytes($bytes, $precision = 2) {
                 </div>
             </div>
         </header>
+
+        <?php
+        $clientIp = BandwidthManager::getClientIp();
+        $bm = new BandwidthManager();
+        $usage = $bm->getUsage($clientIp);
+        ?>
+        <div class="bandwidth-container">
+            <div class="bandwidth-header">
+                <div class="bandwidth-title">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h2>My Bandwidth Usage</h2>
+                </div>
+                <div class="ip-display">
+                    <span>Your IP:</span> <code><?php echo htmlspecialchars($clientIp); ?></code>
+                </div>
+            </div>
+            
+            <div class="bandwidth-bars">
+                <div class="bandwidth-bar-item">
+                    <div class="bar-labels">
+                        <span class="bar-name">Daily Limit (500 MB)</span>
+                        <span class="bar-value"><?php echo formatBandwidthBytes($usage['daily_bytes']); ?> / 500 MB (<?php echo $usage['daily_percentage']; ?>%)</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill <?php echo $usage['daily_percentage'] >= 90 ? 'critical' : ($usage['daily_percentage'] >= 75 ? 'warning' : ''); ?>" style="width: <?php echo $usage['daily_percentage']; ?>%"></div>
+                    </div>
+                </div>
+                
+                <div class="bandwidth-bar-item">
+                    <div class="bar-labels">
+                        <span class="bar-name">Weekly Limit (1 GB)</span>
+                        <span class="bar-value"><?php echo formatBandwidthBytes($usage['weekly_bytes']); ?> / 1 GB (<?php echo $usage['weekly_percentage']; ?>%)</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill <?php echo $usage['weekly_percentage'] >= 90 ? 'critical' : ($usage['weekly_percentage'] >= 75 ? 'warning' : ''); ?>" style="width: <?php echo $usage['weekly_percentage']; ?>%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="search-bar">
             <input type="text" id="search-input" placeholder="Search JSON files...">
